@@ -10,6 +10,16 @@ int main(int argc, char *argv[])
     if (argc > 1) {
         miles = atof(argv[1]);
     }
+
+    if (argv[0] < 0.0) { // (indicates unit test)
+	float miles[200] = { };
+	float kilos[200] = { }; 
+
+
+	cout << endl;
+	return 0;
+    }
+
     cout << miles << " miles = ";
     cout << milesToKm(miles) << " Km" << endl;
     cout << endl;
